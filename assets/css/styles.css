@@ -1,22 +1,140 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap');
-:root { --ink:#070b14; --panel:#0d1422; --acid:#b7f52a; --blue:#2357ff; --paper:#f2f0e9; }
-html { scroll-behavior: smooth; }
-body { font-family: Manrope, ui-sans-serif, system-ui, sans-serif; background:var(--ink); }
-.mono { font-family:"DM Mono", monospace; }
-.grid-bg { background-color:var(--ink); background-image:linear-gradient(rgba(183,245,42,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(183,245,42,.06) 1px,transparent 1px); background-size:56px 56px; }
-.grid-bg::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(90deg,transparent 49.9%,rgba(183,245,42,.16) 50%,transparent 50.1%); }
-.glow { box-shadow:18px 18px 0 var(--blue); }
-.service-card { transition: transform .25s ease, border-color .25s ease, background .25s ease; }
-.service-card:hover { transform:translate(-4px,-4px); border-color:var(--acid); box-shadow:7px 7px 0 var(--acid); }
-.social { border: 1px solid rgb(51 65 85); border-radius: .6rem; padding: .5rem .7rem; font-size: .75rem; font-weight: 700; color: rgb(203 213 225); }
-.social:hover { border-color:var(--acid); color:var(--acid); }
-.page-hero { background:linear-gradient(115deg,var(--ink) 0 68%,var(--blue) 68% 100%); }
-.acid { color:var(--acid); }
-.bg-acid { background:var(--acid); }
-.cut-corner { clip-path:polygon(0 0,calc(100% - 26px) 0,100% 26px,100% 100%,0 100%); }
-.ticker { overflow:hidden; white-space:nowrap; border-block:1px solid rgba(183,245,42,.35); }
-.ticker-track { display:inline-block; min-width:200%; animation:ticker 24s linear infinite; }
-@keyframes ticker { to { transform:translateX(-50%); } }
-@media (prefers-reduced-motion:reduce){.ticker-track{animation:none}}
-summary::-webkit-details-marker { display: none; }
-details[open] summary span { transform: rotate(45deg); }
+/* Fuentes principales: Manrope para contenido y DM Mono para detalles técnicos. */
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap");
+
+/* Variables de la identidad visual de AQRS IT Consulting. */
+:root {
+  --ink: #070b14;
+  --panel: #0d1422;
+  --acid: #b7f52a;
+  --blue: #2357ff;
+  --paper: #f2f0e9;
+}
+
+/* Configuración general del documento. */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ink);
+  font-family: Manrope, ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Fuente monoespaciada para etiquetas, indicadores y datos técnicos. */
+.mono {
+  font-family: "DM Mono", monospace;
+}
+
+/* Fondo cuadriculado utilizado en la portada principal. */
+.grid-bg {
+  background-color: var(--ink);
+  background-image:
+    linear-gradient(rgba(183, 245, 42, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(183, 245, 42, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.grid-bg::after {
+  background: linear-gradient(
+    90deg,
+    transparent 49.9%,
+    rgba(183, 245, 42, 0.16) 50%,
+    transparent 50.1%
+  );
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+/* Efectos visuales aplicados a paneles y tarjetas de servicios. */
+.glow {
+  box-shadow: 18px 18px 0 var(--blue);
+}
+
+.service-card {
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.service-card:hover {
+  border-color: var(--acid);
+  box-shadow: 7px 7px 0 var(--acid);
+  transform: translate(-4px, -4px);
+}
+
+/* Enlaces compactos de redes sociales mostrados en el pie de página. */
+.social {
+  border: 1px solid rgb(51 65 85);
+  border-radius: 0.6rem;
+  color: rgb(203 213 225);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.5rem 0.7rem;
+}
+
+.social:hover {
+  border-color: var(--acid);
+  color: var(--acid);
+}
+
+/* Encabezado interior compartido por las páginas secundarias. */
+.page-hero {
+  background: linear-gradient(115deg, var(--ink) 0 68%, var(--blue) 68% 100%);
+}
+
+/* Clases auxiliares de color y geometría. */
+.acid {
+  color: var(--acid);
+}
+
+.bg-acid {
+  background: var(--acid);
+}
+
+.cut-corner {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 26px) 0,
+    100% 26px,
+    100% 100%,
+    0 100%
+  );
+}
+
+/* Cinta animada con las áreas de servicio de la empresa. */
+.ticker {
+  border-block: 1px solid rgba(183, 245, 42, 0.35);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-track {
+  animation: ticker 24s linear infinite;
+  display: inline-block;
+  min-width: 200%;
+}
+
+@keyframes ticker {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Respeta la preferencia del usuario de reducir animaciones. */
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+  }
+}
+
+/* Personalización de los acordeones de preguntas frecuentes. */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary span {
+  transform: rotate(45deg);
+}
