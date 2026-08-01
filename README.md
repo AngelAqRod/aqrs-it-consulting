@@ -33,11 +33,3 @@ El proyecto no utiliza frameworks de JavaScript, base de datos ni procesos de co
 El sitio está publicado mediante GitHub Pages:
 
 [Ver AQRS IT Consulting](https://angelaqrod.github.io/aqrs-it-consulting/)
-
-## Pendientes
-
-- Agregar los datos de contacto definitivos.
-- Incorporar los enlaces oficiales de las redes sociales.
-- Crear la bitácora de siete días en Blogger.
-- Insertar el video de YouTube para inversionistas.
-- Agregar los nombres y fotografías de los integrantes del grupo.
