@@ -69,7 +69,24 @@ if (faqs) faqs.innerHTML = [
   ['¿Qué métodos de pago aceptan?','Transferencia bancaria, depósito y otros medios acordados en la propuesta comercial.'],
   ['¿Ofrecen garantía?','Sí. Cada proyecto indica su período de garantía y las condiciones de soporte posteriores.'],
   ['¿Atienden emergencias?','Los clientes con plan de soporte pueden acceder a canales prioritarios según el acuerdo contratado.']
-].map(([q,a]) => `<details class="rounded-2xl border border-slate-200 bg-white p-6"><summary class="flex cursor-pointer list-none items-center justify-between font-black">${q}<span class="text-2xl text-blue-600 transition">+</span></summary><p class="mt-4 border-t border-slate-100 pt-4 leading-7 text-slate-600">${a}</p></details>`).join('');
+].map(([question, answer], index) => `
+  <details class="group border-b border-slate-950 bg-transparent">
+    <summary class="grid cursor-pointer list-none grid-cols-[42px_1fr_auto] items-center gap-3 py-7 sm:grid-cols-[70px_1fr_auto]">
+      <span class="mono text-xs font-bold text-blue-700">
+        0${index + 1}
+      </span>
+      <span class="text-lg font-black sm:text-xl">
+        ${question}
+      </span>
+      <span class="grid h-9 w-9 place-items-center border border-slate-950 text-xl font-normal transition group-open:bg-lime-300">
+        +
+      </span>
+    </summary>
+    <p class="max-w-2xl pb-8 pl-[54px] leading-7 text-slate-600 sm:pl-[82px]">
+      ${answer}
+    </p>
+  </details>
+`).join('');
 
 const posts = document.querySelector('[data-posts]');
 if (posts) posts.innerHTML = [
