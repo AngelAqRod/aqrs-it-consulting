@@ -90,11 +90,28 @@ if (faqs) faqs.innerHTML = [
 
 const posts = document.querySelector('[data-posts]');
 if (posts) posts.innerHTML = [
-  ['Día 1','El origen de AQRS','Presentamos nuestra propuesta y el problema empresarial que queremos resolver.'],
-  ['Día 2','Cuando la red detiene el negocio','Señales de que la conectividad necesita una revisión profesional.'],
-  ['Día 3','Ciberseguridad para PYMES','Cinco controles básicos para proteger usuarios e información.'],
-  ['Día 4','Monitoreo que previene fallos','Cómo las alertas tempranas reducen tiempos de interrupción.'],
-  ['Día 5','Virtualización inteligente','Más flexibilidad y aprovechamiento de la infraestructura.'],
-  ['Día 6','El valor del soporte preventivo','Por qué anticiparse cuesta menos que reaccionar a una emergencia.'],
-  ['Día 7','Nuestra hoja de ruta','Conclusiones de la semana y próximos pasos para AQRS.']
-].map(([day,title,description], index) => `<article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"><div class="h-2 bg-gradient-to-r ${index % 2 ? 'from-cyan-400 to-blue-600' : 'from-blue-700 to-indigo-500'}"></div><div class="p-7"><div class="flex items-center justify-between gap-4"><p class="text-sm font-black uppercase tracking-widest text-blue-600">${day}</p><span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800">Pendiente</span></div><h2 class="mt-3 text-2xl font-black">${title}</h2><p class="mt-3 leading-7 text-slate-600">${description}</p><p class="mono mt-6 text-xs font-bold uppercase tracking-wider text-slate-400">Se publicará en Blogger</p></div></article>`).join('');
+  ['Día 1','El origen de AQRS','Presentamos nuestra propuesta y el problema empresarial que queremos resolver.','https://aqrs-angel.blogspot.com/2026/08/dia-1-el-origen-de-aqrs-it-consulting.html'],
+  ['Día 2','Cuando la red detiene el negocio','Señales de que la conectividad necesita una revisión profesional.',null],
+  ['Día 3','Ciberseguridad para PYMES','Cinco controles básicos para proteger usuarios e información.',null],
+  ['Día 4','Monitoreo que previene fallos','Cómo las alertas tempranas reducen tiempos de interrupción.',null],
+  ['Día 5','Virtualización inteligente','Más flexibilidad y aprovechamiento de la infraestructura.',null],
+  ['Día 6','El valor del soporte preventivo','Por qué anticiparse cuesta menos que reaccionar a una emergencia.',null],
+  ['Día 7','Nuestra hoja de ruta','Conclusiones de la semana y próximos pasos para AQRS.',null]
+].map(([day, title, description, url], index) => `
+  <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+    <div class="h-2 bg-gradient-to-r ${index % 2 ? 'from-cyan-400 to-blue-600' : 'from-blue-700 to-indigo-500'}"></div>
+    <div class="p-7">
+      <div class="flex items-center justify-between gap-4">
+        <p class="text-sm font-black uppercase tracking-widest text-blue-600">${day}</p>
+        <span class="rounded-full px-3 py-1 text-xs font-bold ${url ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}">
+          ${url ? 'Publicado' : 'Pendiente'}
+        </span>
+      </div>
+      <h2 class="mt-3 text-2xl font-black">${title}</h2>
+      <p class="mt-3 leading-7 text-slate-600">${description}</p>
+      ${url
+        ? `<a href="${url}" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block font-black text-blue-700 hover:text-blue-500">Leer en Blogger →</a>`
+        : '<p class="mono mt-6 text-xs font-bold uppercase tracking-wider text-slate-400">Se publicará en Blogger</p>'}
+    </div>
+  </article>
+`).join('');
