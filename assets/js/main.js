@@ -91,7 +91,7 @@ if (faqs) faqs.innerHTML = [
 const posts = document.querySelector('[data-posts]');
 if (posts) posts.innerHTML = [
   ['Día 1','El origen de AQRS','Presentamos nuestra propuesta y el problema empresarial que queremos resolver.','https://aqrs-angel.blogspot.com/2026/08/dia-1-el-origen-de-aqrs-it-consulting.html'],
-  ['Día 2','Cuando la red detiene el negocio','Señales de que la conectividad necesita una revisión profesional.',null],
+  ['Día 2','Cuando la red detiene el negocio','Señales de que la conectividad necesita una revisión profesional.','https://aqrs-angel.blogspot.com/2026/08/dia-2-cuando-la-red-detiene-el-negocio.html'],
   ['Día 3','Ciberseguridad para PYMES','Cinco controles básicos para proteger usuarios e información.',null],
   ['Día 4','Monitoreo que previene fallos','Cómo las alertas tempranas reducen tiempos de interrupción.',null],
   ['Día 5','Virtualización inteligente','Más flexibilidad y aprovechamiento de la infraestructura.',null],
