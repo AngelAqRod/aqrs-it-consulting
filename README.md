@@ -21,7 +21,7 @@ El proyecto no utiliza frameworks de JavaScript, base de datos ni procesos de co
 
 - Página principal.
 - Servicios.
-- Noticias y enlace pendiente al blog de Blogger.
+- Noticias y bitácora de siete días enlazada con Blogger.
 - Información de la empresa.
 - Contacto y ubicación.
 - Preguntas frecuentes.
