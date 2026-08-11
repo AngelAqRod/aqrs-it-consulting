@@ -95,7 +95,7 @@ if (posts) posts.innerHTML = [
   ['Día 3','Ciberseguridad para PYMES','Cinco controles básicos para proteger usuarios e información.','https://aqrs-angel.blogspot.com/2026/08/dia-3-ciberseguridad-para-pequenas-y.html'],
   ['Día 4','Monitoreo que previene fallos','Cómo las alertas tempranas reducen tiempos de interrupción.','https://aqrs-angel.blogspot.com/2026/08/dia-4-monitoreo-que-ayuda-prevenir.html'],
   ['Día 5','Virtualización inteligente','Más flexibilidad y aprovechamiento de la infraestructura.','https://aqrs-angel.blogspot.com/2026/08/dia-5-virtualizacion-inteligente-para.html'],
-  ['Día 6','El valor del soporte preventivo','Por qué anticiparse cuesta menos que reaccionar a una emergencia.',null],
+  ['Día 6','El valor del soporte preventivo','Por qué anticiparse cuesta menos que reaccionar a una emergencia.','https://aqrs-angel.blogspot.com/2026/08/dia-6-el-valor-del-soporte-tecnico.html'],
   ['Día 7','Nuestra hoja de ruta','Conclusiones de la semana y próximos pasos para AQRS.',null]
 ].map(([day, title, description, url], index) => `
   <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
