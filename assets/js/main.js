@@ -34,7 +34,22 @@ if (footer) {
       <div class="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-3 lg:px-8">
         <div><p class="text-xl font-black tracking-widest text-white">AQRS<span class="text-lime-300">:</span>IT</p><p class="mt-3 max-w-sm text-sm leading-6">Ingeniería, observabilidad y seguridad para empresas que no pueden detenerse.</p></div>
         <div><p class="font-bold text-white">Enlaces</p><div class="mt-3 grid grid-cols-2 gap-2 text-sm"><a href="servicios.html">Servicios</a><a href="noticias.html">Noticias</a><a href="empresa.html">Empresa</a><a href="contacto.html">Contacto</a></div></div>
-        <div><p class="font-bold text-white">Síganos</p><div class="mt-4 flex flex-wrap gap-3"><a class="social" href="#" aria-label="Facebook">Facebook</a><a class="social" href="#" aria-label="Instagram">Instagram</a><a class="social" href="#" aria-label="LinkedIn">LinkedIn</a><a class="social" href="#" aria-label="YouTube">YouTube</a></div></div>
+        <div>
+          <p class="font-bold text-white">Síganos</p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <a class="social" href="#" aria-label="Facebook">Facebook</a>
+            <a class="social" href="#" aria-label="Instagram">Instagram</a>
+            <a class="social" href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a
+              class="social"
+              href="https://www.youtube.com/@aqrsitconsulting"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Canal de YouTube de AQRS IT Consulting">
+              YouTube
+            </a>
+          </div>
+        </div>
       </div>
       <p class="mx-auto mt-10 max-w-7xl border-t border-white/10 px-5 pt-6 text-xs lg:px-8">© <span data-year></span> AQRS IT Consulting. Proyecto académico — Universidad Galileo.</p>
     </footer>`;
