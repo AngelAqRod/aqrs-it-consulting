@@ -37,7 +37,13 @@ if (footer) {
         <div>
           <p class="font-bold text-white">Síganos</p>
           <div class="mt-4 flex flex-wrap gap-3">
-            <a class="social" href="#" aria-label="Facebook">Facebook</a>
+            <a
+              class="social"
+              href="https://www.facebook.com/people/AQRS-it-consulting/61593613642509/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook de AQRS IT Consulting"
+            >Facebook</a>
             <a class="social" href="#" aria-label="Instagram">Instagram</a>
             <a class="social" href="#" aria-label="LinkedIn">LinkedIn</a>
             <a
