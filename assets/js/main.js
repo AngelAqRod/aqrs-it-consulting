@@ -15,7 +15,13 @@ if (header) {
     <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl">
       <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8" aria-label="Navegación principal">
         <a href="index.html" class="flex items-center gap-3" aria-label="AQRS IT Consulting, inicio">
-          <span class="grid h-11 w-11 place-items-center border border-lime-300 bg-lime-300 font-black tracking-tight text-slate-950">A:</span>
+          <img
+            src="assets/images/aqrs-logo.png"
+            alt=""
+            class="h-11 w-11 rounded-md border border-white/20 bg-white object-cover"
+            width="44"
+            height="44"
+          >
           <span class="leading-tight"><strong class="block text-lg tracking-[.12em] text-white">AQRS</strong><small class="mono text-[10px] uppercase tracking-[.16em] text-lime-300">IT / CONSULTING</small></span>
         </a>
         <button data-menu class="rounded-lg border border-white/15 p-2 text-white md:hidden" aria-expanded="false" aria-label="Abrir menú"><span class="block h-0.5 w-6 bg-current"></span><span class="my-1.5 block h-0.5 w-6 bg-current"></span><span class="block h-0.5 w-6 bg-current"></span></button>
